@@ -21,7 +21,7 @@ I am an **AI Researcher** specializing in the intersection of Deep Learning and 
     -	Applied self-supervised learning and multimodal integration to synthesize data (MRI, Genomic, and Transcriptomics), reduced annotation needs and improved precision medicine patient cohort stratification.
     -	Designed proactive Reinforcement Learning (MDP, policy gradient) to build intelligent medical dialogue agents that provide automated, factually accurate clinical insights and real-time decision support.
     -	Mentored M.S. and undergraduate students weekly through code reviews, literature writing, and experimental protocol development to improve AI workflow quality, and elevating end-to-end AI research workflows.
-
+##
 * Ariasamaneh | Tehran, Iran                                                                                                                     May 2021 – Sep 2022
   Machine Learning Engineer     
     -	Optimized high-throughput algorithms for complex visual data analysis by implementing multi-threaded data pipelines, 25% reduction in system latency and enabling real-time decision support for industrial applications.
@@ -30,6 +30,7 @@ I am an **AI Researcher** specializing in the intersection of Deep Learning and 
 
 ## Selected Publications
 *	Babaei, Mahdi, et al. “Memory-augmented, Adaptive, Incremental, and Literature-grounded Framework for Hypothesis Generation in Science” (ACL Conference, 2026, under review)
+*	##
 *	Li, Xueshen, Babaei, Mahdi, et al. “An Agentic Approach to Enhancing Data Quality in Imperfect Radiology Reports for VLM Fine-Tuning” (ACL Conference, 2026, under review)
 *	Liu, Haozhe, Babaei, Mahdi, et al. “Clinical Triplet Entity Knowledge Distillation for Object Hallucination Mitigation in Radiology Report Generation” (CVPR Conference, 2026, under review)
 *	Babaei, Mahdi, et al. “Automated Cell Properties Measurements From 3D Bioprinted Tissue Samples Via Deep Learning and Optical Coherence Tomography” (Journal of Biomedical Optics Express, 2025)
