@@ -6,7 +6,7 @@
 ---
 
 ## Executive Summary
-Ph.D. Candidate and Lead Researcher specializing in the architecture of **Agentic AI and Generative Multimodal Models**. Proven expertise in bridging the gap between theoretical research and scalable production, from developing SOTA **Temporal Consensus Diffusion** models to architecting real-time, hardware-accelerated inference engines. Expert in developing self-supervised foundation models, Agentic Clinical Reasoning frameworks, and high-throughput MLOps pipelines.
+Lead AI Researcher and Ph.D. Candidate specializing in **Deep Learning for Medical Image Processing, 3D Reconstruction, and Multimodal Foundation Models**. Proven expertise in architecting state-of-the-art ML prototypes for complex clinical datasets (radiology, tomographic imaging), from developing novel Diffusion models for segmentation to engineering robust denoising and representation learning frameworks. Expert in PyTorch, vision transformers, and self-supervised training for clinical diagnostics. Passionate about leveraging AI-driven precision medicine and automated radiological analysis to revolutionize patient care and disease tracking.
 
 ---
 
