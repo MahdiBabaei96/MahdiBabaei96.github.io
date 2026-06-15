@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahdi Babaei | AI Research Scientist & ML Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for Theming */
+        :root {
+            --bg-color: #0f172a; /* Deep Slate Blue */
+            --surface-color: #1e293b;
+            --primary-accent: #38bdf8; /* Light Blue */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --nav-height: 70px;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary-accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #7dd3fc;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--primary-accent);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-accent);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: var(--nav-height);
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h2 {
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-accent);
+            transform: translateY(-3px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 6rem 0;
+        }
+
+        /* About & Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background-color: var(--surface-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-category p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .timeline-item {
+            background-color: var(--surface-color);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-accent);
+            transition: transform 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .timeline-date {
+            color: var(--primary-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .timeline-item ul {
+            list-style-position: inside;
+            color: var(--text-muted);
+        }
+
+        .timeline-item li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary-accent);
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--primary-accent);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Publications */
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-item {
+            padding: 1.5rem;
+            background-color: var(--surface-color);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .pub-item strong {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-item em {
+            color: var(--primary-accent);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.8rem; }
+            .nav-links { display: none; } /* Add a hamburger menu for production if desired */
+            .timeline-header { flex-direction: column; }
+            .timeline-date { margin-top: 0.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">Mahdi Babaei</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Research & Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Mahdi Babaei</h1>
+            <h2>Senior AI Research Scientist & ML Engineer</h2>
+            <p>Ph.D. Candidate in Biomedical Engineering specializing in Large Language Models, Multimodal Foundation Models, and Computer Vision. I build scalable, agentic AI frameworks to accelerate drug discovery and precision medicine.</p>
+            <div class="social-links">
+                <a href="https://github.com/MahdiBabaei96" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/mahdibabaei1996" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:mbabaei1@stevens.edu" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Core AI</h3>
+                    <p>Deep Learning, Generative AI (LLMs/VLMs), RAG, Agentic Workflows, LangChain, RLHF, Prompt Engineering, Diffusion Models, NeRFs.</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Engineering</h3>
+                    <p>Python, C/C++, PyTorch, TensorFlow, OpenCV. High-Performance Computing (HPC), Distributed Training (DeepSpeed, FSDP), CUDA, Triton.</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> MLOps & Infra</h3>
+                    <p>Docker, Kubernetes, AWS/GCP, API Integrations, Vector DBs (Pinecone/Weaviate), CI/CD for ML (MLflow, Weights & Biases).</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-dna"></i> Domain Mastery</h3>
+                    <p>Bio-Informatics, Multi-Omics Data Fusion, Multimodal Analysis, Clinical Trial Simulation, Real-Time Signal Processing (EEG/OCT).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Lead Research Scientist</span>
+                        <span class="timeline-date">Sep 2023 – Present</span>
+                    </div>
+                    <div class="timeline-company">Stevens Institute of Technology | Intelligent Image Processing Lab</div>
+                    <ul>
+                        <li>Engineered a multi-agent Vision-Language Model (VLM) framework with cross-modal memory for longitudinal clinical report generation.</li>
+                        <li>Architected the MAIL framework, an autonomous LLM orchestration pipeline for iterative scientific hypothesis generation using adaptive in-context learning.</li>
+                        <li>Developed a hallucination detection pipeline achieving 94% factual accuracy using multi-head knowledge distillation.</li>
+                        <li>Built an end-to-end PyTorch and OCT pipeline for real-time 3D cell reconstruction, currently deployed across three partner labs.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-title">ML Research Intern</span>
+                        <span class="timeline-date">Jan 2023 – Sep 2023</span>
+                    </div>
+                    <div class="timeline-company">The Institute for Signal and Information Processing | Advanced Computational Lab</div>
+                    <ul>
+                        <li>Optimized end-to-end EEG signal pipelines using PyTorch, CUDA, and Temporal-Spatial Transformers, hitting 92% classification accuracy for early-stage diagnostics.</li>
+                        <li>Engineered a robust denoising GAN framework for EEG time-series data to isolate neural signals from artifacts.</li>
+                        <li>Benchmarked Variational Quantum Circuits (VQCs) against ResNets, achieving a 15% improvement in feature-extraction efficiency.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Machine Learning Engineer</span>
+                        <span class="timeline-date">May 2021 – Sep 2022</span>
+                    </div>
+                    <div class="timeline-company">Ariasamaneh | Industrial AI Division</div>
+                    <ul>
+                        <li>Redesigned visual data pipelines in C++/Python, reducing system latency by 25% for mission-critical applications.</li>
+                        <li>Engineered TensorRT-optimized inference engines for NVIDIA Jetson platforms, achieving a 3× throughput increase.</li>
+                        <li>Architected CI/CD pipelines with MLflow and Jenkins, slashing deployment cycles from weeks to hours.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Selected AI Architectures</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3 class="project-title">MAIL Framework</h3>
+                    <p class="project-desc">An autonomous LLM orchestration pipeline designed for iterative scientific hypothesis generation. Integrates a dynamic literature retrieval engine and an evolving memory bank to guide multi-round reasoning.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Agentic Workflows</span>
+                        <span class="tech-tag">RAG</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">TeCoDi-Refiner</h3>
+                    <p class="project-desc">A Temporal Consensus Diffusion framework leveraging self-supervised learning to drastically boost the precision of 3D volumetric cell segmentation in time-lapse microscopy.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Diffusion Models</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Multimodal VLM Architectures</h3>
+                    <p class="project-desc">Developed self-supervised foundation models combining genomic, MRI, and transcriptomic data, effectively cutting patient-cohort stratification time by 30% for clinical trials.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Multi-Omics Fusion</span>
+                        <span class="tech-tag">Vision-Language Models</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <strong>TeCoDi-Refiner: Temporal Consensus Diffusion for Accurate Instance Segmentation in Time-Lapse Microscopy</strong>
+                    <span>Babaei, M., et al. <em>MICCAI, 2026 (under review)</em></span>
+                </li>
+                <li class="pub-item">
+                    <strong>An Agentic Approach to Enhancing Data Quality in Imperfect Radiology Reports for VLM Fine-Tuning</strong>
+                    <span>Li, Xueshen, Babaei, Mahdi, et al. <em>ACL Conference, 2026 (under review)</em></span>
+                </li>
+                <li class="pub-item">
+                    <strong>Memory-augmented, Adaptive, Incremental, and Literature-grounded Framework for Hypothesis Generation in Science</strong>
+                    <span>Babaei, Mahdi, et al. <em>Knowledge-Based Systems Journal, 2026 (under review)</em></span>
+                </li>
+                <li class="pub-item">
+                    <strong>Automated Cell Properties Measurements From 3D Bioprinted Tissue Samples Via Deep Learning and OCT</strong>
+                    <span>Babaei, Mahdi, et al. <em>Journal of Biomedical Optics Express, 2025</em></span>
+                </li>
+                <li class="pub-item">
+                    <strong>Detection of Polypharmacy Side Effects by Integrating Multiple Data Sources and CNNs</strong>
+                    <span>Babaei, Mahdi, et al. <em>Journal of Molecular Diversity, 2022</em></span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mahdi Babaei. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
